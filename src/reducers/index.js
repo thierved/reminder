@@ -1,7 +1,7 @@
-import { ADD_REMINDER, REMOVE_REMINDER } from '../actions';
+import { ADD_REMINDER, REMOVE_REMINDER, CLEAR_ALL } from '../actions';
 let index = 0;
 export default (state = [], action) => {
-    
+
     switch (action.type) {
 
         case ADD_REMINDER:        
@@ -14,6 +14,9 @@ export default (state = [], action) => {
         case REMOVE_REMINDER:     
             const filtered = state.filter(item =>  item.id !== action.id);            
             return [...filtered];
+
+        case CLEAR_ALL:
+            return [];
 
         default:
             return state;

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import moment from 'moment'
 
-import { addReminder, deleteReminder } from '../actions';
+import { addReminder, deleteReminder, clearAll } from '../actions';
 
 class AddTodo extends Component {
     constructor(props) {
@@ -52,8 +52,8 @@ class AddTodo extends Component {
                         value={this.state.data}
                         onChange={event => this.setState({date: event.target.value})} />
                     <div className="buttons">
-                        <button>add</button>
-                        <button>clear</button>
+                        <button onClick={this.submit}>add</button>
+                        <button onClick={() => this.props.clearAll()}>clear</button>
                     </div>
                     
                 </form>
@@ -72,7 +72,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({addReminder, deleteReminder}, dispatch);
+    return bindActionCreators({addReminder, deleteReminder, clearAll}, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddTodo);

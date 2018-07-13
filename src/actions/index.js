@@ -1,5 +1,6 @@
 export const ADD_REMINDER = 'ADD_REMINDER';
 export const REMOVE_REMINDER = 'REMOVE_REMINDER';
+export const CLEAR_ALL = 'CLEAR_ALL';
 
 export const addReminder = (text, date) => {
     return {
@@ -14,4 +15,10 @@ export const deleteReminder = (id) => {
         type: REMOVE_REMINDER,
         id
     };
+}
+
+export const clearAll = () => {
+    return {
+        type: CLEAR_ALL
+    }
 }
