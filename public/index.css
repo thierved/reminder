@@ -13,7 +13,8 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 800px;
     min-height: 200px;
     padding: 2rem 0;
     margin: auto;
