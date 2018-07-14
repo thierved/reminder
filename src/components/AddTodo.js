@@ -35,7 +35,7 @@ class AddTodo extends Component {
                 <li key={index}>
                     <span id="left">{item.todo}</span>
                     <span id="right">{item.date}</span>
-                    <span onClick={() => this.props.deleteReminder(item.id)}>&#x2715;</span>
+                    <span onClick={() => this.props.deleteReminder(item.id)} id='delete'>&#x2715;</span>
                 </li>
             )
         });        
