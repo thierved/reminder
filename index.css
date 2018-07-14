@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body, h2, li, ul {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background: rgb(110, 109, 109);
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    min-height: 200px;
+    padding: 2rem 0;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 3rem;
+    color: rgba(238, 238, 238, 0.74);
+}
+
+.app-container {
+    width: 80%;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.add-todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.add-todo input {
+    padding: 5px 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.add-todo button {
+    padding: 2px;
+    text-transform: uppercase;
+}
+
+.add-todo input, .buttons button {
+    height: 40px;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.add-todo input:focus {
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button:focus {
+    outline: none;
+}
+
+.buttons button {
+    width: 40%;
+    border-radius: 5px;
+    border: 2px solid rgba(253, 253, 253, 0.49);
+    color: rgb(247, 247, 247);
+    transition: all 0.5s ease-in-out;
+}
+
+button:nth-child(1) {
+    background: rgb(76, 143, 76);
+}
+
+button:nth-child(2) {
+    background: rgb(189, 79, 59);
+}
+
+button:nth-child(1):hover {
+    background: rgb(40, 77, 40);
+    cursor: pointer;
+}
+
+button:nth-child(2):hover {
+    background: rgb(105, 43, 32);
+    cursor: pointer;
+}
+
+ul {
+    margin: auto;
+}
+
+li {
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: rgba(247, 247, 247, 0.98);
+    color: rgb(101, 101, 101);
+    transition: all ease-in-out 0.25s;
+}
+
+li:hover {
+    background: rgb(255, 255, 255);
+    transform: scale(1.01);
+}
+
+li span {
+    display: block;    
+}
+
+#left {
+     width: 55%;
+}
+#right {
+    width: 45%;
+}
+
+#delete {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    padding: 5px;
+    background: rgb(141, 33, 33);
+    color: white;
+}
+
+#delete:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
